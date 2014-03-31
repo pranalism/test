@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>multiple transitions</title>
+<style>
+.widget {
+	padding: 1em;
+	background-color: black;
+	left: 10px;
+	position: absolute;
+	top: 90px;
+	transition: background-color 4s linear, left 4s ease-in-out, top 4s ease-in-out;
+}
+div:hover .widget {
+	background-color: silver;
+	left: 130px;
+	top: 10px;
+}
+
+</style>
+</head>
+<body>
+	<div>
+		<div class='widget'>black box</div>
+	</div>
+</body>

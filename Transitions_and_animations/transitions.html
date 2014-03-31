@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>transitions</title>
+<style>
+.abc {
+	background-color: black;/* Start Value*/
+	-webkit-transition: background-color 2s; /* transition*/
+	-moz-transition: background-color 2s;
+	-ms-transition: background-color 2s;
+}
+.abc:hover { /* trigger*/
+	background-color: silver; /* End Value*/
+}
+</style>
+</head>
+<body>
+	<div class='abc'>
+		This div depicts simple transition
+	</div>
+</body>

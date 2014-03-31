@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome to COOKTALE</title>
+<style>
+/* LAYOUT STYLING*/
+body{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 100%;
+}
+.parent-container{
+	margin: 0 6%;
+}
+.header{
+	overflow: auto;
+	position: relative;
+	margin: 0 0 20px 0;
+	padding: 20px 0;
+}
+.container-main{
+	width:70%;
+	margin:0 0 0 22px;
+	float:left;
+	
+}
+.container-right{
+	width:25%;
+	float:right;
+	
+}
+.footer{
+	overflow: hidden;
+	clear: both;
+	margin: 0 0 25px 22px;
+	border-top: 1px dashed #000;
+}
+/* HEADER STYLING*/
+#logo{
+	float:left;
+}
+#form-search{
+	position: absolute;
+	top: 60px;
+	right: 0;
+}
+input[type=text] {
+	padding: .2em;
+	border: 1px dashed #000000;
+	background: hsla(0,0%,100%,.7);
+}
+input[type=text]:focus {
+	background: hsla(0,0%,100%,.9);
+}
+#banner{
+	float:left;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:400%;
+	letter-spacing:-1px;
+	margin-top:44px;
+}
+
+/*input[type=submit] {
+	padding: .1em .2em .3em;
+	border: 1px solid hsla(0,0%,0%,.3);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #2485A7;
+	background-image: -moz-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,.3));
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(hsla(0,0%,100%,0)), to(hsla(0,0%,100%,.3)));
+	color: #fff;
+	text-shadow: 0 -1px 0 hsla(0,0%,0%,.8);
+}*/
+#nav-main{
+	float:right;
+	margin-top:89px;
+	background: url(images/bg_nav.gif) repeat-x;
+}
+#nav-main ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#nav-main li{
+	float:left;
+	padding: 0 0 0 2px;
+}
+#nav-main a{
+	text-transform: uppercase;
+	font-size:14px;
+	border-right: 1px solid #73757A;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 0 15px 0;
+}
+/* CONTAINER-MAIN STYLING*/
+
+#cuisine-main{
+	margin-top:40px;
+}
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.cuisine {
+	float: left; /* float containment */
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+.cuisine-alpha {
+	float: left;
+	text-align: right;
+}
+.cuisine_type{
+	margin-left:330px;
+}
+.cuisine_name{
+	font-size:20px;
+	font-weight:bold;
+	
+}
+.cuisine_desc{
+	font-size:14px;
+	line-height: 25px;
+}
+
+/* CONTAINER-SECONDARY STYLING*/
+
+.container-right div {
+	line-height: 1.2;
+}
+#newsletter {
+	padding: 1em;
+	border: 1px solid #000;
+	margin-top: 32px;
+	margin-bottom: 20px;
+}
+#newsletter p {
+	margin: .7em 0 .7em 0;
+	font-size: 14px;
+}
+#form-newsletter * {
+	display: block;
+	margin-bottom: .5em;
+}
+#form-newsletter  {
+	font-size: 15px;
+}
+
+#form-newsletter input[type=text] {
+	width: 95%;
+}
+.badge{
+	float:left;
+	padding-right:20px;
+}
+#emailHeader{
+	text-transform: uppercase;
+	letter-spacing:2px;
+}
+#news ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#news li {
+	margin: .5em 0;
+	padding: 0 0 .5em 0;
+	border-bottom: 1px dashed #000;
+}
+#news a{
+	font-size:10px;
+}
+#news p{
+	font-size:10px;
+}
+#news{
+	margin: 35px 0 0 0;
+}
+#specials p{
+	font-size:14px;
+	margin: .7em 0 .7em 0;
+}
+#newsHeader{
+	font-size:14px;
+	font-weight:bold;
+	text-transform: uppercase;
+	letter-spacing:2px;
+}
+/* FOOTER COMPONENTS ---- */
+.footer p, .footer dl {
+	margin: 10px 0 0 0;
+	font-size: 68%;
+	line-height: 1.2;
+}
+#about {
+	margin-top: 10px;
+	float: left;
+	width: 70%;
+}
+
+#contacts {
+	margin-top: 10px;
+	float: right;
+	width: 25%;
+}
+
+/* TEXT ----------------- */
+p, h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+h1 {
+	margin-bottom: .25em;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 300%;
+	letter-spacing: -1px;
+}
+h1, h2, h3 {
+	font-weight: normal;
+	line-height: 1.2;
+}
+h3 {
+	margin-bottom: 0;
+	color: #555;
+}
+h2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 185%;
+	letter-spacing: -1px;
+}
+h3 {
+	font-family: Cambria, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 112.5%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+a { color: #116E8F; }
+a:hover { color: #2485A7; }
+</style>
+</head>
+<body>
+	<div class='parent-container'>
+		<div class='header'>
+			<img src='images/logo.png' alt='' id='logo'>
+			<div id='banner'>COOKTALE</div>
+			<form action="#" method="post" id="form-search">
+	    		<label for="search">Search:</label>
+	        	<input type="text" name="search" id="search" value="">
+				<img id='go' src='images/go.png' width='25px' height='25px'>
+		    	<!-- <input type="submit" value='go'> -->
+		 	</form>
+		 	<div id="nav-main">
+            	<ul id="nav">
+               		<li><a href="#">Home</a></li>
+               		<li><a href="#">About</a></li>
+               		<li><a href="#">Cuisine</a></li>
+               		<li><a href="#">Recipes</a></li>
+               		<li><a href="#">Tips</a></li>
+			   		<li><a href="#">Submit Recipe</a></li>
+               		<li><a href="#">Contact Us</a></li>
+            	</ul>
+         	</div>		
+		</div> <!-- End of header-->
+		<div class='container-main'>
+			<h2 id='introduction'>Tell Us !! </h2>
+			<p id='intro-content'>Yes it is true that anyone can cook. Tell us your tale behind how you learned cooking and share your recipe. We will publish it to the world and show how anyone can cook. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.  </p>	
+			<div id='cuisine-main'>
+				<ol>
+					<li class='cuisine'>
+						<div class="cuisine-alpha" id='indian'>
+				    		<img src="images/indian-cuisine.jpg" width="300" height="230" alt="">
+				    	</div>
+						<div class='cuisine_type'>
+				    		<h3 class='cuisine_name'>Indian Cuisine</h3>
+				    		<div class='cuisine_desc'>Indian cuisine or Indian food encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.
+				    		</div>
+						</div>
+					</li>
+					<li class='cuisine'>
+						<div class="cuisine-alpha" id='chinese'>
+				    		<img src="images/chinese_cuisine.jpg" width="300" height="230" alt="">
+				    	</div>
+						<div class='cuisine_type'>
+				    		<h3 class='cuisine_name'>Chinese Cuisine</h3>
+				    		<div class='cuisine_desc'>Chinese cuisine or Chinese food encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.
+				    		</div>
+						</div>
+					</li>
+					<li class='cuisine'>
+						<div class="cuisine-alpha" id='ethiopian'>
+				    		<img src="images/ethiopian_cuisine.jpg" width="300" height="230" alt="">
+				    	</div>
+						<div class='cuisine_type'>
+				    		<h3 class='cuisine_name'>ethiopian Cuisine</h3>
+				    		<div class='cuisine_desc'>ethiopian ethiopian or ethiopian food encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.
+				    		</div>
+						</div>
+					</li>
+					<li class='cuisine'>
+						<div class="cuisine-alpha" id='italian'>
+				    		<img src="images/italian_cuisine.jpg" width="300" height="230" alt="">
+				    	</div>
+						<div class='cuisine_type'>
+				    		<h3 class='cuisine_name'>Italian Cuisine</h3>
+				    		<div class='cuisine_desc'>Italian cuisine or Italian food encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.
+				    		</div>
+						</div>
+					</li>
+					<li class='cuisine'>
+						<div class="cuisine-alpha" id='japanese'>
+				    		<img src="images/japanese_cuisine.jpg" width="300" height="230" alt="">
+				    	</div>
+						<div class='cuisine_type'>
+				    		<h3 class='cuisine_name'>Japanese Cuisine</h3>
+				    		<div class='cuisine_desc'>Japanese cuisine or Japanese food encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.
+				    		</div>
+						</div>
+					</li>
+					<li class='cuisine'>
+						<div class="cuisine-alpha" id='thai'>
+				    		<img src="images/thai_cuisine.jpg" width="300" height="230" alt="">
+				    	</div>
+						<div class='cuisine_type'>
+				    		<h3 class='cuisine_name'>Thai Cuisine</h3>
+				    		<div class='cuisine_desc'>Thai cuisine or Thai food encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.
+				    		</div>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</div> <!-- End of container-main-->
+		<div class='container-right'>
+			<div id="newsletter">
+	        	<h3 id='emailHeader'>Email Newsletter</h3>
+	            <p>Sign up to get monthly recipes, exclusive offers and more.</p>
+	            <form action="#" method="post" id="form-newsletter">
+	                <label for="email">Email:</label>
+	                <input type="text" name="email" id="email" value="">
+	                <input type="submit" value="subscribe">
+	            </form>
+	        </div>
+	        <div id="specials">
+	        	<img src='images/badge.png' class="badge" width='80' height='80'>
+	        	<h3>Festival Special</h3>
+	            <p>Pellen tesque habitant morbi tristique senectus et netus et malesuada fames.</p>
+	        </div>
+	        <div id="news">
+	          	<h4 id='newsHeader'>News</h4>
+	            <ul>
+	               <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a></li>
+	               <li><a href="#">Aliquam tincidunt mauris eu risus</a></li>
+	               <li><a href="#">Vestibulum auctor dapibus neque</a></li>
+	            </ul>
+	            <p>Read more at our <a href="#">blog</a> and <a href="#">follow us on Twitter</a>.</p>
+	        </div>
+		</div> <!-- End of container-left-->
+		<div class='footer'>
+			<div id="about">
+	       	  <h3>About this Page</h3>
+	            <p>This page is for a fictional site. It was created<a href="#"> @golive </a> labs to deliver CSS3 Exercise to the students of golive labs. <i>The copyrights of this page is reserved by golive labs and cannot be used by outsider for any commercial purpose</i>. The sole purpose of this document is to make you understand CSS3 features.</p>
+	        </div>
+			<div id="contacts">
+	       	  <h3>Contact Us</h3>
+			  <dl>
+            	<dt>Men @ Work: </dt>
+                <dd>Bindeshwari Mishra @<a href="www.linkedin.com/pub/bindhyeswari-prasad-mishra/37/770/b01">linkedIn</a></dd>
+				<dd>Rohit @<a href="www.linkedin.com/in/rohitaroradotme">linkedIn</a></dd>
+                <dd>Bhanu Pratap </dd>
+              </dl>
+	        </div>
+		</div> <!-- End of footer-->
+</body>
+</html>

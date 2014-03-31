@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<title>multiple color stop values</title>
+
+<style>
+.container div { min-height: 100px; }
+
+div.no-min { min-height: 0; }
+
+
+.span-5 { background-color: red; }
+
+.container {
+	width:950px;
+	margin:0 auto;
+}
+	
+.span-2, .span-5 {
+	float:left;
+	margin-right:10px;
+}
+.last {
+	margin-right:0;
+}
+.span-2 {width:70px;}
+.span-5 {width:190px;}
+.gradient-1 {
+	background-image: -webkit-linear-gradient(to right,#0392CE,#FD5308,#0392CE);
+	background-image: linear-gradient(to right,#0392CE,#FD5308,#0392CE);
+}
+.gradient-2 {
+	background-image: -webkit-linear-gradient(to right,#0392CE,#FD5308 75%,#0392CE);
+	background-image: linear-gradient(to right,#0392CE,#FD5308 75%,#0392CE);
+}
+.gradient-3 {
+	background-image: -webkit-linear-gradient(to top,#0392CE,#FD5308 20px,#0392CE); 
+	background-image: linear-gradient(to top,#0392CE,#FD5308 20px,#0392CE); 
+}
+.gradient-4 {
+	background-image: -webkit-linear-gradient(45deg,#0392CE,#FD5308,#0392CE,#FD5308,#0392CE);
+	background-image: linear-gradient(45deg,#0392CE,#FD5308,#0392CE,#FD5308,#0392CE);
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="span-2">&thinsp;</div>
+    <div class="span-5 gradient-1"></div>
+    <div class="span-5 gradient-2"></div>
+    <div class="span-5 gradient-3"></div>
+    <div class="span-5 gradient-4"></div>
+    <div class="span-2 last">&thinsp;</div>
+</div>
+</body>
+</html>

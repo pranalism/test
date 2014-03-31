@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>2D transformations</title>
+<style>
+body{
+	padding-bottom:200px;
+}
+.container{
+	padding: 1em;
+	margin-top: 32px;
+	margin-bottom: 20px;
+	-moz-box-shadow: 0 0 8px hsla(0,0%,0%,.8);
+	-webkit-box-shadow: 0 0 8px hsla(0,0%,0%,.8);
+	box-shadow: 0 0 8px hsla(0,0%,0%,.8);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: #eee; /* for IE 8 and earlier */
+	background: hsla(0,0%,100%,.3);
+	width:25%;
+}
+
+#ten, #nine, #eight, #seven, #five, #four, #three, #two, #one{
+	width: 25%;
+	position: relative;
+}
+#tena, #ninea, #eighta, #sevena, #fivea, #foura, #threea, #twoa, #onea{
+	background: hsla(0,0%,0%,.3);
+}
+
+#tenb, #nineb, #eightb, #sevenb, #fiveb, #fourb, #threeb, #twob, #oneb{
+	color:#c8c8c8;
+	text-align:right;
+}
+#onea, #oneb {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#oneb:hover{
+	-moz-transform: rotate(-5deg); /* Firefox */
+	-ms-transform: rotate(-5deg); /* Internet Explorer */
+	-o-transform: rotate(-5deg); /* Opera */
+	-webkit-transform: rotate(-5deg); /* WebKit */
+	transform: rotate(-5deg); /* Future-proofing */
+/*	z-index: 10;*/
+	color:#000;
+}
+
+#two{
+	margin-top:150px;
+}
+
+#twoa, #twob {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#twob:hover{
+	-moz-transform: rotate(-5deg); /* Firefox */
+	-ms-transform: rotate(-5deg); /* Internet Explorer */
+	-o-transform: rotate(-5deg); /* Opera */
+	-webkit-transform: rotate(-5deg); /* WebKit */
+	transform: rotate(-5deg); /* Future-proofing */
+	-moz-transform-origin: 0 0; /* Firefox */
+	-ms-transform-origin: 0 0;/* Internet Explorer */
+	-o-transform-origin: 0 0; /* Opera */
+	-webkit-transform-origin: 0 0; /* WebKit */
+	transform-origin: 0 0;/* Future-proofing */
+/*	z-index: 10;*/
+	color:#000;
+}
+
+#three{
+	margin-top:280px;
+}
+
+#threea, #threeb {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#threeb:hover{
+	-moz-transform: translate(20px, 20px); /* Firefox */
+	-ms-transform: translate(20px, 20px); /* Internet Explorer */
+	-o-transform: translate(20px, 20px); /* Opera */
+	-webkit-transform: translate(20px, 20px); /* WebKit */
+	transform: translate(20px, 20px); /* Future-proofing */
+/*	z-index: 10;*/
+	color:#000;
+}
+
+#four{
+	margin-top:380px;
+}
+
+#foura, #fourb {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#fourb:hover{
+	-moz-transform: skew(-45deg,5deg); /* Firefox */
+	-ms-transform: skew(-45deg,5deg); /* Internet Explorer */
+	-o-transform: skew(-45deg,5deg); /* Opera */
+	-webkit-transform: skew(-45deg,5deg); /* WebKit */
+	transform: skew(-45deg,5deg); /* Future-proofing */
+/*	z-index: 10;*/
+	color:#000;
+}
+
+#five{
+	margin-top:480px;
+}
+
+#fivea, #fiveb {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#fiveb:hover{
+	-moz-transform: scale(1.5, 0.5); /* Firefox */
+	-ms-transform: scale(1.5, 0.5); /* Internet Explorer */
+	-o-transform: scale(1.5, 0.5); /* Opera */
+	-webkit-transform: scale(1.5, 0.5); /* WebKit */
+	transform: scale(1.5, 0.5); /* Future-proofing */
+/*	z-index: 10;*/
+	color:#000;
+}
+
+#six{
+	margin-top:580px;
+	position: relative;
+	
+}
+
+#sixa {
+    position: absolute;
+    top: 0;
+    left: 0;
+	padding: 2em;
+	margin-top: 32px;
+	margin-bottom: 20px;
+	-moz-box-shadow: 0 0 8px hsla(0,0%,0%,.8);
+	-webkit-box-shadow: 0 0 8px hsla(0,0%,0%,.8);
+	box-shadow: 0 0 8px hsla(0,0%,0%,.8);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: #eee; /* for IE 8 and earlier */
+	background: hsla(0,0%,100%,.3);
+	width:355px;
+}
+
+#sixb{
+	position: absolute;
+    top: 104px;
+    left: 77px;
+	
+}
+
+#sixb{
+	background: hsla(0,0%,0%,.3);
+	-moz-transform: rotate(-40deg) scale(0.75) translate(-46%,-400%); /* Firefox */
+	-ms-transform: rotate(-40deg) scale(0.75) translate(-46%,-400%); /* Internet Explorer */
+	-o-transform: rotate(-40deg) scale(0.75) translate(-46%,-400%); /* Opera */
+	-webkit-transform: rotate(-40deg) scale(0.75) translate(-46%,-400%); /* WebKit */
+	transform: rotate(-40deg) scale(0.75) translate(-46%,-400%); /* Future-proofing */
+/*	z-index: 10;*/
+	color:#000;
+	padding:8px;
+}
+
+#seven{
+	margin-top:780px;
+}
+
+#sevena, #sevenb {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#sevenb:hover{
+	-moz-transform: matrix(1.25,0,0,1.25,215px,15px);
+	-ms-transform: matrix(1.25,0,0,1.25,215,15);
+	-o-transform: matrix(1.25,0,0,1.25,215,15);
+	-webkit-transform: matrix(1.25,0,0,1.25,215,15);
+	color:#000;
+}
+
+#eight{
+	margin-top:100px;
+}
+
+#eighta, #eightb {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#eightb:hover{
+	-moz-transform: matrix(1,0,0,-1,0px,54px);
+	-ms-transform: matrix(1,0,0,-1,0,54);
+	-o-transform: matrix(1,0,0,-1,0,54);
+	-webkit-transform: matrix(1,0,0,-1,0,54);
+	color:#000;
+}
+
+#nine{
+	margin-top:220px;
+}
+
+#ninea, #nineb {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#nineb:hover{
+	-moz-transform: matrix(1,0,1,1,18,54px);
+	-ms-transform: matrix(1,0,1,1,18,54);
+	-o-transform: matrix(1,0,1,1,18,54);
+	-webkit-transform: matrix(1,0,1,1,18,54);
+	color:#000;
+}
+
+#ten{
+	margin-top:350px;
+}
+
+#tena, #tenb {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tenb:hover{
+	-moz-transform: matrix(0.98,-0.17,0.17,0.98,0,86px);
+	-ms-transform: matrix(0.98,-0.17,0.17,0.98,0,86);
+	-o-transform: matrix(0.98,-0.17,0.17,0.98,0,86);
+	-webkit-transform: matrix(0.98,-0.17,0.17,0.98,0,86);
+	color:#000;
+}
+
+</style>
+</head>
+<body>
+	<div class='container'>
+		This text will be transformed
+	</div>
+	<div id='one'>
+		<div class='container' id='onea'>This text will be transformed to rotate</div>
+		<div class='container' id='oneb'>ROTATE</div>
+	</div>
+	<div id='two'>
+		<div class='container' id='twoa'>This will be transformed to rotate at an origin</div>
+		<div class='container' id='twob'>ORIGIN</div>
+	</div>
+	<div id='three'>
+		<div class='container' id='threea'>This text will be transformed to translate</div>
+		<div class='container' id='threeb'>TRANSLATE</div>
+	</div>
+	<div id='four'>
+		<div class='container' id='foura'>This text will be transformed to skew</div>
+		<div class='container' id='fourb'>SKEW</div>
+	</div>
+	<div id='five'>
+		<div class='container' id='fivea'>This text will be transformed to scale</div>
+		<div class='container' id='fiveb'>SCALE</div>
+	</div>
+	<div id='six'>
+		<div id='sixa'>This text will be transformed using multiple transformation</div>
+		<div id='sixb'>NEW</div>
+	</div>
+	<div id='seven'>
+		<h3 id='matrixEx'>MATRIX EXAMPLES</h3>
+		<div class='container' id='sevena'>This text will be transformed to scale using matrix</div>
+		<div class='container' id='sevenb'>MATRIX - SCALE</div>
+	</div>
+	<div id='eight'>
+		<div class='container' id='eighta'>This text will be transformed to flip using matrix</div>
+		<div class='container' id='eightb'>This text will be transformed to flip using matrix</div>
+	</div>
+	<div id='nine'>
+		<div class='container' id='ninea'>This text will be transformed to skew using matrix</div>
+		<div class='container' id='nineb'>MATRIX - SKEW</div>
+	</div>
+	<div id='ten'>
+		<div class='container' id='tena'>This text will be transformed to skew using matrix</div>
+		<div class='container' id='tenb'>MATRIX - SKEW</div>
+	</div>
+</body>
+</html>

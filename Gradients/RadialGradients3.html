@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<title>gradients</title>
+
+<style>
+
+.container {
+	width:950px;
+	margin:0 auto;
+}
+.container div { min-height: 100px; }
+
+div.no-min { min-height: 0; }	
+
+.span-5, .span-2 {
+	float:left;
+	margin-right:10px;
+}
+.last {
+	margin-right:0;
+}
+.span-5 {width:190px;}
+.span-2 {width:70px;}
+.span-5 { background-color: red; }
+.gradient-1 {
+	background-image: -webkit-radial-gradient(farthest-side circle,black,white);
+	background-image: radial-gradient(farthest-side circle,black,white);
+}
+.gradient-2 {
+	background-image: -webkit-radial-gradient(farthest-side circle at left,black,white);
+	background-image: radial-gradient(farthest-side circle at left,black,white);
+}
+.gradient-3 {
+	background-image: -webkit-radial-gradient(farthest-corner circle at right top,white,black);
+	background-image: radial-gradient(farthest-corner circle at right top,white,black);
+}
+.gradient-4 {
+	background-image: -webkit-radial-gradient(farthest-corner circle at right top,white,black);
+	background-image: radial-gradient(farthest-corner circle at right top,white,black);
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="span-2">&thinsp;</div>
+    <div class="span-5 gradient-1"></div>
+    <div class="span-5 gradient-2"></div>
+    <div class="span-5 gradient-3"></div>
+    <div class="span-5 gradient-4"></div>
+    <div class="span-2 last">&thinsp;</div>
+</div>
+</div>
+</body>
+</html>

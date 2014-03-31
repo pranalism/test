@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>animation</title>
+<style>
+@-webkit-keyframes 'border-changer' {
+	from { border-width: 10px; }
+	50% { border-width: 1px; }
+	to {
+		border-width: 5px;
+		height: 120px;
+		width: 75px;
+	}
+}
+
+div {
+	margin:10%;
+	padding: 1em;
+	text-align:center;
+	width: 200px;
+	border: 1px solid green;
+	-webkit-animation-name: border-changer;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-delay: 2s;
+	-webkit-animation-iteration-count: 10;
+	-webkit-animation-direction: alternate;
+}
+
+div:hover { 
+	-webkit-animation-play-state: paused; 
+}
+
+/*Shorthand
+
+div { animation: 'border-changer' 6s ease-in 2s 10 alternate; }
+
+*/
+
+
+</style>
+</head>
+<body>
+	<div> My first animated text !!</div> 
+</body>
